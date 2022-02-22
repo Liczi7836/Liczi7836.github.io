@@ -1,6 +1,6 @@
 $(document).ready(function() {
   const apiRoot = 'http://localhost:8080/v1/tasks';
-  const trelloApiRoot = 'https://api.trello.com/1/members/61ec0305a471240bc7d95970';
+  const trelloApiRoot = 'https://api.trello.com/1/members/grzegorzwaszczynski';
   const datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
   const $tasksContainer = $('[data-tasks-container]');
 
@@ -12,7 +12,7 @@ $(document).ready(function() {
   getAllTasks();
 
   function getAllAvailableBoards(callback, callbackArgs) {
-    var requestUrl = trelloApiRoot + '/boards';
+    var requestUrl = trelloApiRoot + '/boards?key=b61be9c9752432677fb1fe9975ed67d5&token=358e4c283674c85ed2ae1125d4fd6553ea14cda4582f15d902c8a3d70dbfc82c';
 
     $.ajax({
       url: requestUrl,
