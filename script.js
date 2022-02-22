@@ -12,7 +12,7 @@ $(document).ready(function() {
   getAllTasks();
 
   function getAllAvailableBoards(callback, callbackArgs) {
-    var requestUrl = trelloApiRoot + '/boards?key=b61be9c9752432677fb1fe9975ed67d5&token=358e4c283674c85ed2ae1125d4fd6553ea14cda4582f15d902c8a3d70dbfc82c';
+    var requestUrl = trelloApiRoot + '/boards';
 
     $.ajax({
       url: requestUrl,
@@ -166,7 +166,7 @@ $(document).ready(function() {
   }
 
   function handleCardCreationRequest(event) {
-    var requestUrl = trelloApiRoot + '/cards?idList=61ec0305a471240bc7d95971';
+    var requestUrl = trelloApiRoot + '/cards';
     var $relatedTaskRow = $(event.target).parents('[data-task-id]');
     var relatedTaskId = $relatedTaskRow.attr('data-task-id');
     var relatedTask = availableTasks[relatedTaskId];
